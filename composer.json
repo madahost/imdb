@@ -26,5 +26,5 @@
         "files": ["imdb.php"]
   },
   "minimum-stability": "dev",
-  "prefer-stable": true,
+  "prefer-stable": true
 }
