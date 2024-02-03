@@ -1,5 +1,5 @@
 {
-  "name": "mrjk990/imdb",
+  "name": "madahost/imdb",
   "type": "library",
   "description": "This PHP library enables you to scrape data from IMDB.com.",
   "keywords": [
@@ -8,13 +8,13 @@
     "PHP",
     "Client"
   ],
-  "homepage": "https://github.com/mrjk990/imdb",
+  "homepage": "https://github.com/madahost/imdb",
   "license": "MIT",
   "authors": [
     {
       "name": "MadaHost",
       "email": "madahost@gmail.com",
-      "homepage": "https://github.com/mrjk990/"
+      "homepage": "https://github.com/madahost/"
     }
   ],
   "require": {
@@ -24,5 +24,7 @@
   },
   "autoload": {
         "files": ["imdb.php"]
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
 }
