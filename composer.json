@@ -24,6 +24,6 @@
   "autoload": {
         "files": ["imdb.php"]
   },
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "prefer-stable": true
 }
