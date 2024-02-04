@@ -9,7 +9,7 @@ how to use
 ```php
 $imdb = new \Imdb\Title("tt01087789");
 if($imdb->isReady()) {
-	var_dump($imdb->title());
+	$title = $imdb->title();
 }
 ```
 
