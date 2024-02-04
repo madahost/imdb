@@ -1,4 +1,5 @@
 # IMDB API
+This PHP library enables you to scrape data from IMDB.com.
 
 install 
 ```php
