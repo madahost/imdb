@@ -104,6 +104,10 @@ EOF;
 
         $data = $this->graphql->query($query, "TitleYear", ["id" => "tt$this->imdbID"]);
 
+		if(!isset($data->title->titleText->text)) {
+			return false;
+		}
+
         $this->main_title = ucwords(trim(str_replace('"', ':', trim($data->title->titleText->text, '"'))));
         $this->main_original_title = ucwords(trim(str_replace('"', ':', trim($data->title->originalTitleText->text, '"'))));
         $this->main_movietype = isset($data->title->titleType->text) ? $data->title->titleType->text : '';
@@ -112,6 +116,19 @@ EOF;
         if ($this->main_year == "????") {
             $this->main_year = "";
         }
+    }
+
+    /** Check if data parsed
+     * @return Boolean
+     */
+    public function isReady()
+    {
+        if ($this->main_title == "") {
+            if($this->title_year() === false){
+				return false;
+			}
+        }
+        return true;
     }
 
     /** Get movie type
