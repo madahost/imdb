@@ -1,13 +1,26 @@
 # IMDB API
 
 install 
-
-`composer require madahost/imdb:dev-master`
-
+```php
+composer require madahost/imdb:dev-master`
+```
 how to use
 ```php
 $imdb = new \Imdb\Title("tt01087789");
 if($imdb->isReady()) {
 	var_dump($imdb->title());
 }
+```
+
+For persons:
+```php
+$name = new \Imdb\Name("0000154");
+$name = $name->name();
+$nickname = $name->nickname();
+```
+
+For Calendar:
+```php
+$calendar = new \Imdb\Calendar();
+$releases = $calendar->comingSoon();
 ```
